@@ -1,0 +1,26 @@
+<h1>Sign Up</h1>
+<%= form_with model: @user,url: users_new_path do |form| %>
+<div class="mb-3">
+  <%= form.label :name %>
+  <%= form.text_field :name,class: "form-control",placeholder: "Name" %>
+</div>
+<div class="mb-3">
+  <%= form.label :email %>
+  <%= form.text_field :email,class: "form-control",placeholder: "app@gmail.com" %>
+</div>
+<div class="mb-3">
+  <%= form.label :mobile_number %>
+  <%= form.text_field :mobile_number,class: "form-control",placeholder: "Mobile number" %>
+</div>
+<div class="mb-3">
+  <%= form.label :password %>
+  <%= form.password_field :password,class: "form-control",placeholder: "Password" %>
+</div>
+<div class="mb-3">
+  <%= form.label :password_confirmation %>
+  <%= form.password_field :password_confirmation, class: "form-control",placeholder: "Confirm Password" %>
+</div>
+<div class="mb-3">
+<%= form.submit %>
+</div>
+<% end %>
